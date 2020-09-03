@@ -1,14 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Name} from './components/Name';
-import ClassCom from './components/ClassCom';
-import Hello from './components/Hello';
-import Visitor from './components/Visitor';
-import Counter from './components/Counter';
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
-import EventBind from './components/EventBind';
-import RandomNo from './components/RandomNo';
 import RandomN from './components/RandomN';
 
 function App() {
@@ -30,7 +21,7 @@ function App() {
 {/* <FunctionClick />
 <ClassClick /> */}
 {/* <EventBind></EventBind> */}
- <RandomN />
+<RandomN /> 
 
     </div>
   );

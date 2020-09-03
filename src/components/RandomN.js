@@ -19,7 +19,7 @@ class RandomN extends Component {
       // this.setComplete();
       alert(
         "Button " +
-          (this.state.sum1 > this.state.sum2 ? "1" : "2") +
+          (this.state.sum1 > this.state.sum2 ? "2" : "1") +
           " Won , congratutlations !"
       );
     }
