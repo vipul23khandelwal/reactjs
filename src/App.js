@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import RandomN from './components/RandomN';
+import ClassCom from './components/ClassCom';
 
 function App() {
   return (
@@ -17,12 +18,10 @@ function App() {
       {/* <Visitor name="user" /> */}
       {/* <Name name="vipul" nickname="vk"></Name>
     <Counter /> */}
-
+<RandomN />
 {/* <FunctionClick />
 <ClassClick /> */}
 {/* <EventBind></EventBind> */}
-<RandomN /> 
-
     </div>
   );
 }

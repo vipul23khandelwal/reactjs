@@ -8,21 +8,15 @@ class RandomNo extends Component {
         random: null,
       }
     }
-  
-    min = 1;
-    max = 10;
+
   
     handleClick = () => {
-      this.setState({random: this.min + (Math.random() * (this.max - this.min))});
-      console.log('random')
+     const num = Math.floor(Math.random()*10)
+     return num;
         };
   
 
-        handleClick2 = () => {
-            this.setState(
-                {random: this.min + (Math.random() * (this.max - this.min))}            );
-              };
-
+  
     render() {
       return (
         <div>

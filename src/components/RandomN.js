@@ -9,21 +9,26 @@ class RandomN extends Component {
       count1: 0,
       count2: 0,
       completed: false,
-      sum1: 0,
-      sum2: 0
+      sum1: null,
+      sum2: null,
+      visible1: false,
+      visible2: true
     };
   }
 
   componentDidUpdate() {
     if (this.state.count1 === 10 && this.state.count2 === 10) {
-      // this.setComplete();
-      alert(
-        "Button " +
-          (this.state.sum1 > this.state.sum2 ? "2" : "1") +
-          " Won , congratutlations !"
-      );
+      if (this.state.sum1 > this.state.sum2) {
+        alert("Win 1");
+      } else {
+        alert("Win 2");
+      }
     }
   }
+
+  // btn1visible = () => {
+  //   this.setState({});
+  // };
 
   setComplete = () => {
     this.setState({
@@ -43,7 +48,9 @@ class RandomN extends Component {
     }
     this.setState({
       ...this.state,
-      count1: this.state.count1 + 1
+      count1: this.state.count1 + 1,
+      visible1: true,
+      visible2: false
     });
     this.state.list1.push(this.genRandom());
     // console.log(this.state.list1);
@@ -55,7 +62,9 @@ class RandomN extends Component {
     }
     this.setState({
       ...this.state,
-      count2: this.state.count2 + 1
+      count2: this.state.count2 + 1,
+      visible1: false,
+      visible2: true
     });
     this.state.list2.push(this.genRandom());
     // console.log(this.state.list2);
@@ -88,17 +97,17 @@ class RandomN extends Component {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            height: "90vh"
+            height: "50vh"
           }}
         >
           {this.state.completed ? <div>Completed!</div> : null}
           <div>
-            <button onClick={this.handleClick1}>
+            <button onClick={this.handleClick1} disabled={this.state.visible1}>
               Clicked {this.state.count1} times{" "}
             </button>
           </div>
           <div>
-            <button onClick={this.handleClick2}>
+            <button onClick={this.handleClick2} disabled={this.state.visible2}>
               Clicked {this.state.count2} times
             </button>
           </div>
