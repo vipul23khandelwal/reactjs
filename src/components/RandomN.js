@@ -69,6 +69,8 @@ class RandomN extends Component {
     this.state.list2.push(this.genRandom());
     // console.log(this.state.list2);
     if(this.state.count1 === this.state.count2){
+      
+
       // if(this.state.list1[this.state.count1 -1] > this.state.list2[this.state.count2 -1]){
       //   this.setState({
       //     ...this.state,
