@@ -12,23 +12,23 @@ class RandomN extends Component {
       sum1: null,
       sum2: null,
       visible1: false,
-      visible2: true
+      visible2: true,
+      player1count: 0,
+      player2count: 0
     };
   }
 
+ 
+
   componentDidUpdate() {
     if (this.state.count1 === 10 && this.state.count2 === 10) {
-      if (this.state.sum1 > this.state.sum2) {
-        alert("Win 1");
+      if (this.printsum1() > this.printsum2()) {
+         return("Player 1");
       } else {
-        alert("Win 2");
+        return ('player 2');
       }
     }
   }
-
-  // btn1visible = () => {
-  //   this.setState({});
-  // };
 
   setComplete = () => {
     this.setState({
@@ -68,6 +68,19 @@ class RandomN extends Component {
     });
     this.state.list2.push(this.genRandom());
     // console.log(this.state.list2);
+    if(this.state.count1 === this.state.count2){
+      // if(this.state.list1[this.state.count1 -1] > this.state.list2[this.state.count2 -1]){
+      //   this.setState({
+      //     ...this.state,
+      //     player1count: this.state.player1count + 1
+      //   })
+      // }else{
+      //   this.setState({
+      //     ...this.state,
+      //     player2count: this.state.player2count + 1
+      //   })
+      // }
+    } 
   };
 
   printsum1() {
@@ -91,6 +104,11 @@ class RandomN extends Component {
   render() {
     return (
       <>
+<div>
+  winner is : {this.componentDidUpdate()}
+</div>
+    <div style={{ float:"left"}}>Player 1: {this.state.player1count}</div>
+    <div style={{float:"right"}}>{this.state.player2count} :Player 2</div>
         <div
           style={{
             display: "flex",

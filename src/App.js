@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import RandomN from './components/RandomN';
-import ClassCom from './components/ClassCom';
 
 function App() {
   return (
