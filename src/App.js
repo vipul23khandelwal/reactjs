@@ -17,10 +17,11 @@ function App() {
       {/* <Visitor name="user" /> */}
       {/* <Name name="vipul" nickname="vk"></Name>
     <Counter /> */}
-<RandomN />
+{/* <RandomN /> */}
 {/* <FunctionClick />
 <ClassClick /> */}
 {/* <EventBind></EventBind> */}
+<RandomN />
     </div>
   );
 }
